@@ -48,6 +48,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Health")
 	float TakeDamage(float DamageTaken, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
+	UFUNCTION(BlueprintCallable, Category = "Spell")
+	bool GetIsCasting();
+
 protected:
 
 	/** Called for forwards/backward input */
@@ -84,6 +87,7 @@ protected:
 	float CastRate;
 
 	/** If true, we are in the process of firing projectiles. */
+	UPROPERTY(BlueprintCallable, Category = "Spell")
 	bool bIsCasting;
 
 	/** Function for beginning weapon fire.*/

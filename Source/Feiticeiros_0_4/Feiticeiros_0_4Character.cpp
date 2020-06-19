@@ -60,6 +60,11 @@ AFeiticeiros_0_4Character::AFeiticeiros_0_4Character()
 	bIsCasting = false;
 }
 
+
+bool AFeiticeiros_0_4Character::GetIsCasting()
+{
+	return bIsCasting;
+}
 //////////////////////////////////////////////////////////////////////////
 // Input
 
